@@ -195,3 +195,12 @@ elif page == "Admin Dashboard":
             st.write(f"**AI Summary:** {row['ai_summary']}")
             st.write(f"**AI Actions:** {row['ai_actions']}")
             st.markdown("---")
+
+        st.download_button(
+            label="📥 Download Feedback Data (CSV)",
+            data=df.to_csv(index=False),
+            file_name="feedback_data.csv",
+            mime="text/csv"
+            )
+
+
